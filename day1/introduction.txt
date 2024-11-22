@@ -1,0 +1,355 @@
+
+ 0-9 10  	0,1  2		0-7 8	0-9 & A-F
+Decimal		Binary		Octal	Hexadecimal
+0		0		0	0
+1		1		1	1
+2		10		2	2
+3		11		3	3
+4		100		4	4
+5		101		5	5
+6		110		6	6
+7		111		7	7
+8		1000		10	8
+9		1001		11	9
+10		1010		12	A
+11		1011		13	B
+12		1100		14	C
+13		1101		15	D
+14		1110		16	E
+15		1111		17	F
+16		10000		20	10
+
+Data types
+	Standard
+		int, char , float, double, void
+	Derived
+		array, pointers
+	User defined datatype (UDD)
+		structure, union, typedef, enumeration
+
+32 Bit compiler
+int 	4 bytes
+		signed int 
+		Range : -2147483648 to 2147483647
+		unsigned int
+		Range : 0 to 4294967295
+
+	Modifiers
+		signed, unsigned, short , long
+
+	short int or signed short int, short  ==> 2 bytes
+		-32768 to 32767
+	unsigned short int, unsigned short  ==> 2 bytes
+		0 to 65535
+
+	long long int  => 8bytes
+
+char 	1 byte ==> 8 bits
+		-128 to 127
+	unsigned char ==> 1 byte
+		0 to 255
+
+float ==> 4 bytes  ==> 32 bits ==> 6 bits for decimal ==> single precision
+double ==> 8 bytes ==> 64 bits ==> 12 bits for decimal ==> double precision
+
+long double ==> 12 bytes ==> 96 bits ==> 18 bits for decimal
+
+Datatype			format specifier(type character)
+1 char				%c
+1 unsigned char			%c
+2 short int, signed short int	%hi or %hd
+2 unsigned short int		%hu
+4 int, signed int		%d or %i
+4 unsigned int			%u
+4 long int, signed long int	%li or %ld
+4 unsigned long int		%lu
+8 long long int			%lld or %lli
+8 unsigned long long int	%llu
+4 float 			%f, %e,%g, %E, %G
+8  double			%lf
+12 long double			%Lf
+
+
+Practice Link : https://tinyurl.com/b7p3jst5
+
+Operators
+Arithmetic
+	+	Addition
+	-	Subtraction
+	*	Multiplication
+	/	Division
+	%	Remainder
+
+Relational 
+	>		Greater than 
+	<		Less than
+	>=		Greater than  or equal to
+	<=		Less than or equal to
+	==		equal to
+	!=		not equal to
+Logical 
+	&&		AND
+	||		OR
+	!		NOT
+
+Increment/Decrement
+++/--
+
+age = age + 1 ==>  age++
+
+age--
+
+	Post/Pre
+
+Ternary
+	?:
+	Syntax:
+		<condition>?<true_statement>:<false_statement>
+	example:
+		x = 10, y = 20;
+	//Finding max of two values
+	max = x > y ? x : y;
+
+	//finding max of three values
+
+	max = x>y&&x>z?:x:(y>z:y:z);
+
+	code optimization
+
+	if (x>y && x > z)
+		max = x;
+	else if (y > z)
+		max = y;
+	else
+		max = z;
+Bitwise
+	&	AND
+	|	OR
+	^	XOR
+	~	NOT, NEGATION, 1'S COMPLEMENT
+	>>	RIGHT SHIFT
+	<<	LEFT SHIFT
+&	
+	x = 10, y = 20;
+	z = x & y
+		0000 0000
+	x	0000 1010
+	y	0001 0100
+		=========
+		0000 0000
+		=========
+|
+
+	x = 10, y = 20;
+	z = x | y
+		0000 0000
+	x	0000 1010
+	y	0001 0100
+		=========
+		0001 1110
+		=========
+^ --> Both inputs are sample output is 0, otherwise 1
+	x = 11, y = 12;
+	z = x ^ y
+		0000 0000
+	x	0000 1011
+	y	0000 1100
+		=========
+		0000 0111
+		=========
+~ 	==> all 0's converted 1, all 1's converted 0
+	X = 10
+	Y = ~X
+		0000 0000
+	X	0000 1010
+	Y	1111 0101
+
+TO FIND DECIMAL VALUE FOR NEGATIVE BINARY
+	1. APPLY 2'S COMPLEMENT ON NEGATIVE BINARY
+		1'S COMPLEMENT + 1
+	2. APPLY 8421 METHOD TO FIND DECIMAL
+	3. ADD NEGATIVE SIGN IN THE RESULT
+
+	1111 0101
+
+	0000 1010	1'S COMPLEMENT
+	0000 0001	+ 1 (2'S COMPLEMENT)
+	=========
+	0000 1011
+	=========
+	
+	x = -10
+	y = ~x
+
+To find binary for negative values
+	1. Find binary value for it's positive value
+	2. Apply 2's Complement on its binary
+
+	0000 0000
+	0000 1010  10's binary
+
+	1111 0101  1's complement
+	0000 0001
+	=========
+	1111 0110	-10's binary value
+
+y	0000 1001
+
+>>
+	x = 10
+	y = x >> 3
+
+Assignment
+	1. Simple
+		=
+			x = 10
+			y = x + 10
+	2. Shorthand or compound
+		+=, -=, *=, /=, %=
+		&=, |=, ^=, >>=, <<=
+		
+		x = x + 10 ==> x += 10;
+Special
+	. ==>structure member accessing operator
+	->   ==> structure pointer member accessing operator
+	&	==> Address operator
+	*	==> indirection operator
+	sizeof  ==> used to find size of data type
+Punctuators
+	[]
+	()
+	,
+	:
+	;
+
+Constants --> user data
+
+	10, -10, 123, 10.9
+	-0.5
+		"Jhansirani"
+		'F'
+		'aasaij@gmail.com'
+Variables
+	1. It is one type of identifier
+	2. Reference to memory location
+	3. It is container
+	4. It is reference to constant
+
+What is an identifier?
+	Used defined word
+What are identifiers?
+	variable
+	label
+	function
+	UDD name
+	
+Rules to define an identifier
+1. Can contain alphabets, digits and underscore(_).
+2. Should not start with digit
+3. Should not be keyword or reserved word
+4. Case sensitive
+5. Length may be anything
+
+Keywords --> ANSI C  --> 32 
+
+Data types
+	int, char, double, float , void
+	Modifier
+		long, short, signed, unsigned
+	Qualifier
+		const, volatile
+	sizeof
+
+Control structures
+	if, else, switch, case, break, default
+	for, do, while, continue, goto
+UDD
+	struct, union, typedef, Enum
+Storage classes
+	auto, register, extern, static
+function
+	return
+
+I/O Statements
+
+	printf()
+function proto-type of printf()
+
+	int printf(<controlstring>[,<argument_list>]);
+	printf("Test");
+
+	<controlstring> --> format specifier
+
+	Syntax --> <controlstring>
+
+	%[flag][width][.precision][l|L|h] <type-character>
+
+		flag :
+			+, -, #, (space)
+		width:
+			n, 0n, *
+			5, 05, *
+		precision
+			n, *
+
+function proto-type for scanf()
+
+	int scanf(<controlstring>, addresses);
+
+
+structure of C program
+
+documentation section
+preprocessor directives
+global declaration
+
+int main(){
+	<local-declarations>
+	<executable-statements>
+
+	return 0;
+}
+
+
+
+	
+
+
+
+	
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	.

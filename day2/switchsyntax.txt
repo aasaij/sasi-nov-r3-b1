@@ -1,0 +1,18 @@
+switch(<expression>){
+	case <value1>:
+			<statements>;break;
+	case <start_range> ... <end_range>:
+			<statements>;break;
+	case <value2>:
+			<statements>; break;
+	....
+	....
+	case <valueN>:
+			statements>;break;
+	default:
+			<statements>;
+}
+
+
+
+

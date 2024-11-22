@@ -1,0 +1,14 @@
+Iterative or Looping
+
+	1. for
+		for (<initial_value>;<condition>;<updation>){
+			<statements_to_be_repeated>
+		}
+		
+		example:
+			for (int i = 1; i<=10; i++)
+				printf("You are all very very silent!");
+		
+	2. while
+	3. do...while
+	

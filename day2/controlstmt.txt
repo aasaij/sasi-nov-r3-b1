@@ -1,0 +1,54 @@
+Control structures
+
+1. Sequential 
+2. Selective
+	if  --> Branching statement
+		two choices, 
+		1. Simple if
+			if(<condition>){
+				<statements>
+			}
+			
+		2. if..else
+			if(<condition>){
+				<true_statements>
+			}
+			else{
+				<false_statements>
+			}
+				
+		3. Nested if
+			if (<condition1>){
+				if (<condion2>){
+					<statement1>
+				}
+				else{
+					<statements2>
+				}
+			}
+			else{
+				<statements3>
+			}
+		4. else..if..ladder
+			if (<condition1>){
+				<statements1>
+			}
+			else if (<condition2>){
+				<statements2>
+			}
+			else if(<condition3>){
+				<statements3>
+			}
+			....
+			....
+			else{
+				<statementsN>
+			}
+			
+		
+		
+	switch --> Multiple branching statements
+		more two choice;
+		
+	
+3. Iterative
