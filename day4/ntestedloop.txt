@@ -1,0 +1,13 @@
+Nested Loop
+Syntax:
+		for (<initital_value>;  <condition>; <updation>){
+			for (<initital_value>;  <condition>; <updation>){
+				<statements>;
+			}
+		}
+		
+		
+		for (int i = 1; i<=5; i++){
+			for (int j = 1; j<=5; j++)
+				printf("Bhargavi is soo cute!");
+		}
